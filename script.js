@@ -5,6 +5,7 @@ console.log(myDiv);
 // Click event to attach to button
 function myClick () {
     var name = document.getElementById('name').value;
+    localStorage.setItem("name", name);
     var activity = document.getElementById('yes').checked;
     var boxes = document.getElementsByName('mitf');
     var levels = ["None", "Pre-Preliminary", "Preliminary", "Pre-Juvenile", "Juvenile", "Intermediate", "Novice", "Junior", "Senior"];
@@ -27,4 +28,6 @@ function myClick () {
             myDiv.innerHTML += "\t\t<ul>~ " + levels[i] + " :]</ul>\n";
         }
     }
+
+    myDiv.innerHTML += "\t\t<ul>Local storage saved your name: " + localStorage.getItem("name");
 }
