@@ -6,6 +6,8 @@ console.log(myDiv);
 function myClick () {
     var name = document.getElementById('name').value;
     localStorage.setItem("name", name);
+    var date = document.getElementById('month').value;
+    var email = document.getElementById('email').value;
     var activity = document.getElementById('yes').checked;
     var boxes = document.getElementsByName('mitf');
     var levels = ["None", "Pre-Preliminary", "Preliminary", "Pre-Juvenile", "Juvenile", "Intermediate", "Novice", "Junior", "Senior"];
@@ -22,12 +24,13 @@ function myClick () {
     }
 
     // Lists tests passed
-    myDiv.innerHTML += "\t\t<h3>You've passed: </h3>\n";
+    myDiv.innerHTML += "\t\t<h3>You've passed (as of " + date + "):</h3>\n";
     for (var i = 0; i < levels.length; i++) {
         if (levelsPassed[i]) {
             myDiv.innerHTML += "\t\t<ul>~ " + levels[i] + " :]</ul>\n";
         }
     }
-
-    myDiv.innerHTML += "\t\t<ul>Local storage saved your name: " + localStorage.getItem("name");
+    
+    myDiv.innerHTML += "\t\t<p>Local storage saved your name: " + localStorage.getItem("name") + "\n</p>";
+    myDiv.innerHTML += "\t\t<p>Dis u? --> " + email + "<\p>";
 }
