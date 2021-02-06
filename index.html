@@ -1,7 +1,7 @@
 <!-- 
     Athena Hernandez
     Honors Comp Sci - P5
-    JavaScript Basics Homework 01/07/21
+    JavaScript Project
 -->
 
 <!DOCTYPE html>
@@ -13,6 +13,10 @@
     </meta>
     <script defer src="script.js"></script>
     <style>
+        * {
+            font-family: Helvetica Neue;
+        }
+
         #myDiv,
         button {
             font-size: 150%;
@@ -27,43 +31,46 @@
 <body>
     <div id="myDiv">
         <p>
-            <!-- Each label must be matched to an input -->
             <label for='name'>Name:</label>
-            <!-- Good practice: give same name and id for every input -->
             <input id='name' name='name' type='text' />
             <br />
             <label for='email'>Email: </label>
             <input type='email' id='email' /><br />
             <label for='month'>Month: </label>
-            <input type='month' id='month'/><br />
-            <h3>Do you like to figure skate?</h3>
-            <input type='radio' id='yes' name='preference' />
-            <label for='yes'>Yes :)</label><br />
-            <input type='radio' id='no' name='preference' />
-            <label for='no'>No #sad</label><br />
+            <input type='month' id='month' /><br />
+        <!-- Radio inputs! -->
+        <h3>Do you like to figure skate?</h3>
+        <input type='radio' id='yes' name='preference' />
+        <label for='yes'>Yes :)</label><br />
+        <input type='radio' id='no' name='preference' />
+        <label for='no'>No #sad</label><br />
 
-            <h3>What USFS MITF test(s) have you passed?</h3>
-            <input type='checkbox' id='none' name='mitf' />
-            <label for='none'>None :(</label><br />
-            <input type='checkbox' id='prepreliminary' name='mitf' />
-            <label for='prepreliminary'>Pre-Preliminary</label><br />
-            <input type='checkbox' id='preliminary' name='mitf' />
-            <label for='preliminary'>Preliminary</label><br />
-            <input type='checkbox' id='prejuvenile' name='mitf' />
-            <label for='prejuvenile'>Pre-Juvenile</label><br />
-            <input type='checkbox' id='juvenile' name='mitf' />
-            <label for='juvenile'>Juvenile</label><br />
-            <input type='checkbox' id='intermediate' name='mitf' />
-            <label for='intermediate'>Intermediate</label><br />
-            <input type='checkbox' id='novice' name='mitf' />
-            <label for='novice'>Novice</label><br />
-            <input type='checkbox' id='junior' name='mitf' />
-            <label for='junior'>Junior</label><br />
-            <input type='checkbox' id='senior' name='mitf' />
-            <label for='senior'>Senior</label>
+        <!-- Checkbox inputs!-->
+        <h3>What USFS MITF test(s) have you passed?</h3>
+        <input type='checkbox' id='none' name='mitf' />
+        <label for='none'>None :(</label><br />
+        <input type='checkbox' id='prepreliminary' name='mitf' />
+        <label for='prepreliminary'>Pre-Preliminary</label><br />
+        <input type='checkbox' id='preliminary' name='mitf' />
+        <label for='preliminary'>Preliminary</label><br />
+        <input type='checkbox' id='prejuvenile' name='mitf' />
+        <label for='prejuvenile'>Pre-Juvenile</label><br />
+        <input type='checkbox' id='juvenile' name='mitf' />
+        <label for='juvenile'>Juvenile</label><br />
+        <input type='checkbox' id='intermediate' name='mitf' />
+        <label for='intermediate'>Intermediate</label><br />
+        <input type='checkbox' id='novice' name='mitf' />
+        <label for='novice'>Novice</label><br />
+        <input type='checkbox' id='junior' name='mitf' />
+        <label for='junior'>Junior</label><br />
+        <input type='checkbox' id='senior' name='mitf' />
+        <label for='senior'>Senior</label>
         </p>
-        <button onclick='myClick()'>Click for summary</button>
+        <!-- Button that class function in JavaScript file -->
+        <button onclick='saveData()'>Click for summary!</button>
     </div>
+    <!-- Adds search results to the bottom of the page -->
+    <div id="previousAns"></div>
 </body>
 
 </html>
